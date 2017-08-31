@@ -1,4 +1,4 @@
-<robot name="exoskeletonURDFmodel_noHuman">
+<robot name="ExoskeletonURDFmodel">
 <link name="ExoTorso">
 	<inertial>
 		<origin xyz="0.209727 -0.0253233 0.0806368" rpy="0 0 0"/>
@@ -8,7 +8,7 @@
 	<visual>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry>
-			<mesh filename="package://Exoskeleton_URDFmodel/meshes/sim_torso_prt.stl" scale="0.001 0.001 0.001"/>
+			<mesh filename="package://Exoskeleton3DOF_URDFmodel/meshes/sim_torso_prt.stl" scale="0.001 0.001 0.001"/>
 		</geometry>
 		<material name="green">
 			<color rgba="0 1 0 1"/>
@@ -17,7 +17,7 @@
 	<collision>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry>
-			<mesh filename="package://Exoskeleton_URDFmodel/meshes/sim_torso_prt.stl" scale="0.001 0.001 0.001"/>
+			<mesh filename="package://Exoskeleton3DOF_URDFmodel/meshes/sim_torso_prt.stl" scale="0.001 0.001 0.001"/>
 		</geometry>
 	</collision>
 </link>
@@ -31,7 +31,7 @@
 	<visual>
 		<origin xyz="0.00595245 0.147807000062 0.0825556000513" rpy="0 0 0"/>
 		<geometry>
-			<mesh filename="package://Exoskeleton_URDFmodel/meshes/sim_rightleg_prt.stl" scale="0.001 0.001 0.001"/>
+			<mesh filename="package://Exoskeleton3DOF_URDFmodel/meshes/sim_rightleg_prt.stl" scale="0.001 0.001 0.001"/>
 		</geometry>
 		<material name="black">
 			<color rgba="0 0 0 1"/>
@@ -40,7 +40,7 @@
 	<collision>
 		<origin xyz="0.00595245 0.147807000062 0.0825556000513" rpy="0 0 0"/>
 		<geometry>
-			<mesh filename="package://Exoskeleton_URDFmodel/meshes/sim_rightleg_prt.stl" scale="0.001 0.001 0.001"/>
+			<mesh filename="package://Exoskeleton3DOF_URDFmodel/meshes/sim_rightleg_prt.stl" scale="0.001 0.001 0.001"/>
 		</geometry>
 	</collision>
 </link>
@@ -54,7 +54,7 @@
 	<visual>
 		<origin xyz="-0.425543 0.147807000204 0.0825556002785" rpy="0 0 0"/>
 		<geometry>
-			<mesh filename="package://Exoskeleton_URDFmodel/meshes/sim_leftleg_prt.stl" scale="0.001 0.001 0.001"/>
+			<mesh filename="package://Exoskeleton3DOF_URDFmodel/meshes/sim_leftleg_prt.stl" scale="0.001 0.001 0.001"/>
 		</geometry>
 		<material name="red">
 			<color rgba="1 0 0 1"/>
@@ -63,7 +63,7 @@
 	<collision>
 		<origin xyz="-0.425543 0.147807000204 0.0825556002785" rpy="0 0 0"/>
 		<geometry>
-			<mesh filename="package://Exoskeleton_URDFmodel/meshes/sim_leftleg_prt.stl" scale="0.001 0.001 0.001"/>
+			<mesh filename="package://Exoskeleton3DOF_URDFmodel/meshes/sim_leftleg_prt.stl" scale="0.001 0.001 0.001"/>
 		</geometry>
 	</collision>
 	</link>

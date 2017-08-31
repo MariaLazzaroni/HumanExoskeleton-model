@@ -6,13 +6,13 @@
 		<pose>0.0 0 0 0 0 0</pose>
 	</include>
 	<include>
-		<uri>model://Exoskeleton_URDFmodel</uri>
+		<uri>model://Exoskeleton3DOF_URDFmodel</uri>
 		<pose>-0.11 -0.2 0.1 0 0 1.570796327</pose>
 	</include>
 
 	<joint name="jFixedExoskeleton" type="fixed"> 
-		<parent>HumanURDFmodel::T8</parent>
-		<child>ExoskeletonURDFmodel::ExoTorso</child>
+		<parent>ExoskeletonURDFmodel::ExoTorso</parent>
+		<child>HumanURDFmodel::T8</child>
 	</joint>
     
 	<joint name="jContactLeftHip" type="fixed">
@@ -24,19 +24,17 @@
 			<visualize>1</visualize>
 			<update_rate>100</update_rate>
 			<pose>0 0 0 0 0 0</pose>
-			<!-- plugin -->
 		</sensor>
 	</joint>
 
 	<joint name="jContactRightHip" type="fixed">
-		<parent>HumanURDFmodel::RightUpperLeg</parent>
-		<child>ExoskeletonURDFmodel::ExoRightLeg</child>
+		<parent>ExoskeletonURDFmodel::ExoRightLeg</parent>
+		<child>HumanURDFmodel::RightUpperLeg</child>
 		<sensor name='jContactRightHip_ft' type='force_torque'>
 			<always_on>1</always_on>
 			<visualize>1</visualize>
 			<update_rate>100</update_rate>
 			<pose>0 0 0 0 0 0</pose>
-			<!-- plugin -->
 		</sensor>
 	</joint>
 

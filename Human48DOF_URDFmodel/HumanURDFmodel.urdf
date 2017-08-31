@@ -1,4 +1,4 @@
-<robot name="meri48model">
+<robot name="HumanURDFmodel">
 <!--To open this model with Gazebo replace the null masses, inertias and dimensions of the 'fake links f1 and f2'-->
     <!--LINKS-->
 	<!--Link base (1)-->
