@@ -1,0 +1,60 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+<model name="HumanExo">
+	<include>
+		<uri>model://Human48DOF_URDFmodel</uri>
+		<pose>0.0 0 0 0 0 0</pose>
+	</include>
+	<include>
+		<uri>model://Exoskeleton_URDFmodel</uri>
+		<pose>-0.11 -0.2 0.1 0 0 1.570796327</pose>
+	</include>
+
+	<joint name="jFixedExoskeleton" type="fixed"> 
+		<parent>HumanURDFmodel::T8</parent>
+		<child>ExoskeletonURDFmodel::ExoTorso</child>
+	</joint>
+    
+	<joint name="jContactLeftHip" type="fixed">
+		<origin xyz="-0.094957 -0.069718 -0.272241" rpy="0 0 0"/>
+		<parent>ExoskeletonURDFmodel::ExoLeftLeg</parent>
+		<child>HumanURDFmodel::LeftUpperLeg</child>
+		<sensor name='jContactLeftHip_ft' type='force_torque'>
+			<always_on>1</always_on>
+			<visualize>1</visualize>
+			<update_rate>100</update_rate>
+			<pose>0 0 0 0 0 0</pose>
+			<!-- plugin -->
+		</sensor>
+	</joint>
+
+	<joint name="jContactRightHip" type="fixed">
+		<parent>HumanURDFmodel::RightUpperLeg</parent>
+		<child>ExoskeletonURDFmodel::ExoRightLeg</child>
+		<sensor name='jContactRightHip_ft' type='force_torque'>
+			<always_on>1</always_on>
+			<visualize>1</visualize>
+			<update_rate>100</update_rate>
+			<pose>0 0 0 0 0 0</pose>
+			<!-- plugin -->
+		</sensor>
+	</joint>
+
+	<plugin name='controlboard_torso' filename='libgazebo_yarp_controlboard.so'>
+		<yarpConfigurationFile>model://HumanExoskeleton_SDFModel/init/gazebo_torso.ini</yarpConfigurationFile>
+	</plugin>
+	<plugin name='controlboard_leftleg' filename='libgazebo_yarp_controlboard.so'>
+		<yarpConfigurationFile>model://HumanExoskeleton_SDFModel/init/gazebo_leftleg.ini</yarpConfigurationFile>
+	</plugin>
+	<plugin name='controlboard_rightleg' filename='libgazebo_yarp_controlboard.so'>
+		<yarpConfigurationFile>model://HumanExoskeleton_SDFModel/init/gazebo_rightleg.ini</yarpConfigurationFile>
+	</plugin>
+	<plugin name='controlboard_rightarm' filename='libgazebo_yarp_controlboard.so'>
+		<yarpConfigurationFile>model://HumanExoskeleton_SDFModel/init/gazebo_rightarm.ini</yarpConfigurationFile>
+	</plugin>
+	<plugin name='controlboard_leftarm' filename='libgazebo_yarp_controlboard.so'>
+		<yarpConfigurationFile>model://HumanExoskeleton_SDFModel/init/gazebo_leftarm.ini</yarpConfigurationFile>
+	</plugin>
+
+</model>
+</sdf>
