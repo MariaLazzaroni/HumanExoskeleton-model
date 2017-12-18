@@ -41,6 +41,9 @@
 	<plugin name='controlboard_torso' filename='libgazebo_yarp_controlboard.so'>
 		<yarpConfigurationFile>model://HumanExoskeleton_SDFModel/init/gazebo_torso.ini</yarpConfigurationFile>
 	</plugin>
+	<plugin name='controlboard_head' filename='libgazebo_yarp_controlboard.so'>
+		<yarpConfigurationFile>model://HumanExoskeleton_SDFModel/init/gazebo_head.ini</yarpConfigurationFile>
+	</plugin>
 	<plugin name='controlboard_leftleg' filename='libgazebo_yarp_controlboard.so'>
 		<yarpConfigurationFile>model://HumanExoskeleton_SDFModel/init/gazebo_leftleg.ini</yarpConfigurationFile>
 	</plugin>
