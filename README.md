@@ -8,7 +8,7 @@ Models
 
 * Exoskeleton URDF model: this model is the result of a process of extraction of kinematics parameters, inertial parameters and meshes from the original CAD files of the RoboMate exoskeleton. For more information, see the [documentation](https://github.com/MariaLazzaroni/HumanExoskeleton-model/blob/master/misc/CADtoURDF.pdf).
 
-* Human-Exoskeleton SDF model: is the model, referencing the other two URDF models, of the composite structure. 
+* Human-Exoskeleton SDF model: is the model, referencing the other two URDF models, of the [composite structure](https://github.com/MariaLazzaroni/HumanExoskeleton-model/blob/master/misc/HumanExoskeletonSDF.png). 
 
 Installation
 ------------
